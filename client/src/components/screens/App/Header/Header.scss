@@ -1,0 +1,43 @@
+.header {
+	background-color: rgb(26, 26, 26);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	.wrapper {
+		max-width: 1170px;
+		margin: auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 25px 0;
+		color: rgba(255, 255, 255, 0.906);
+
+		div {
+			padding: 0 7px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		
+			&:hover {
+				cursor: pointer;
+			}
+		
+			svg {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 35px;
+		text-transform: uppercase;
+		font-weight: 600;
+		background: linear-gradient(60deg, rgba(254, 106, 8, 0.935), rgba(255, 200, 0, 0.921));
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: rgba(254, 106, 8, 0.935);
+	}
+}

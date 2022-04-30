@@ -1,0 +1,37 @@
+.nav {
+	background-color: rgb(19, 19, 19);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+
+	.wrapper {
+		max-width: 1170px;
+		margin: auto;
+		padding: 15px 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		svg {
+			transition: .3s;
+			width: 30px;
+			height: 30px;
+			color: rgb(126, 126, 126);
+
+			&:hover {
+				cursor: pointer;
+				color: rgba(255, 255, 255, 0.906);
+			}
+		}
+
+		.nav__home {
+			width: 44px;
+			height: 44px;
+		}
+
+		.active {
+			color: rgba(254, 106, 8, 0.935);
+		}
+	}
+}
