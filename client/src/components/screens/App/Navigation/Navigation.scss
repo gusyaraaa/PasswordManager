@@ -32,6 +32,11 @@
 
 		.active {
 			color: rgba(254, 106, 8, 0.935);
+
+			&:hover {
+				cursor: pointer;
+				color: rgba(254, 106, 8, 0.935);
+			}
 		}
 	}
 }
