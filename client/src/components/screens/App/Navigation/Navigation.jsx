@@ -4,8 +4,7 @@ import "./Navigation.scss";
 import { BiLockAlt } from "react-icons/bi";
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import { RiShieldKeyholeLine } from "react-icons/ri";
-import { FiUser } from "react-icons/fi";
+import { RiShieldKeyholeLine, RiUser3Line } from "react-icons/ri";
 
 const Navigation = () => {
 	return (
@@ -27,7 +26,7 @@ const Navigation = () => {
 					<RiShieldKeyholeLine className="nav__home active" />
 				</Link>
 				<Link to="/profile">
-					<FiUser />
+					<RiUser3Line />
 				</Link>
 				<Link to="/inbox">
 					<IoMdNotificationsOutline />
