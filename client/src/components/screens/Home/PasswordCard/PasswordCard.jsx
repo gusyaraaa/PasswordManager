@@ -11,7 +11,7 @@ const PasswordCard = ({ item, data, setData }) => {
 	const copyPassword = async (ms) => {
 		if (!isCopy) {
 			setCopy(true);
-			navigator.clipboard.writeText(data.password);
+			navigator.clipboard.writeText(item.password);
 
 			await (() => {
 				return new Promise((resolve) => setTimeout(resolve, ms));
