@@ -4,9 +4,9 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./reset.css";
 
+import { AuthProvider } from "./providers/AuthProvider";
 import App from "./components/screens/App/App";
 import Layout from "./components/layout/Layout";
-import { AuthProvider } from "./providers/AuthProvider";
 
 const queryClient = new QueryClient();
 
