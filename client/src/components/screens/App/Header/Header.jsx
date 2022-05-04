@@ -1,7 +1,9 @@
 import "./Header.scss";
 
 import { BsArrowLeft, BsPlusCircle } from "react-icons/bs";
+import { MdOutlineDeleteOutline } from "react-icons/md";
 import { CgLogOut } from "react-icons/cg";
+import { Link } from "react-router-dom";
 
 const Header = ({ page }) => {
 	const iconsHandler = {
@@ -9,9 +11,21 @@ const Header = ({ page }) => {
 			backBtn: <CgLogOut />,
 			pageBtn: <BsPlusCircle />,
 		},
-		AnotherPage: {
-			backBtn: <BsArrowLeft />,
-			pageBtn: <BsPlusCircle />,
+		"/card-info": {
+			backBtn: (
+				<Link to="/">
+					<BsArrowLeft />
+				</Link>
+			),
+			pageBtn: <MdOutlineDeleteOutline />,
+		},
+		"/password-generator": {
+			backBtn: (
+				<Link to="/">
+					<BsArrowLeft />
+				</Link>
+			),
+			pageBtn: null,
 		},
 	};
 

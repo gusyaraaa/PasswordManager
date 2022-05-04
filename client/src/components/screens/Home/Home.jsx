@@ -149,7 +149,9 @@ const Home = () => {
 				Stored passwords: <span className="home__passwords-info_data">{data.length}</span>
 			</p>
 			<div className="home__passwords">
-				{data ? data.map((elem) => <PasswordCard data={elem} key={elem.id} />) : "You still haven't any passwords"}
+				{data.map((elem) => (
+					<PasswordCard item={elem} data={data} setData={setData} key={elem.id} />
+				))}
 			</div>
 		</section>
 	);

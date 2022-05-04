@@ -15,7 +15,7 @@
 		color: rgba(255, 255, 255, 0.906);
 
 		div {
-			padding: 0 7px;
+			padding: 0 4px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -39,5 +39,9 @@
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 		color: rgba(254, 106, 8, 0.935);
+	}
+
+	a {
+		color: rgba(255, 255, 255, 0.906);
 	}
 }
