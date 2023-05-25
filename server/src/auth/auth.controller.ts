@@ -20,3 +20,7 @@ export class AuthController {
 		return this.AuthService.register(dto)
 	}
 }
+
+// GET /api/cards get all cards
+// GET /api/cards/:id get one card
+// DELETE /api/cards/:id

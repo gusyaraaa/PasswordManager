@@ -1,26 +1,10 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./PasswordCard.scss";
 
-import { MdOutlineContentCopy, MdOutlineDeleteOutline, MdOutlineInfo } from "react-icons/md";
-import { RiCheckLine } from "react-icons/ri";
+import { MdOutlineDeleteOutline, MdOutlineInfo } from "react-icons/md";
+import { CopyButton } from "./CopyButton";
 
 const PasswordCard = ({ item, data, setData }) => {
-	const [isCopy, setCopy] = useState(false);
-
-	const copyPassword = async (ms) => {
-		if (!isCopy) {
-			setCopy(true);
-			navigator.clipboard.writeText(item.password);
-
-			await (() => {
-				return new Promise((resolve) => setTimeout(resolve, ms));
-			})();
-
-			setCopy(false);
-		}
-	};
-
 	const deleteCard = (_id) => {
 		setData(data.filter((elem) => elem.id !== _id));
 	};
@@ -39,17 +23,11 @@ const PasswordCard = ({ item, data, setData }) => {
 				<MdOutlineDeleteOutline />
 			</div>
 			<div className="password-card__button">
-				<Link to="/card-info">
+				<Link to={`/card-info/${item.id}`}>
 					<MdOutlineInfo />
 				</Link>
 			</div>
-			<div className="password-card__button" onClick={() => copyPassword(1100)}>
-				{isCopy ? (
-					<RiCheckLine className={`${isCopy ? "show" : ""}`} style={{ color: "rgb(13, 190, 13)" }} />
-				) : (
-					<MdOutlineContentCopy />
-				)}
-			</div>
+			<CopyButton item={item} />
 		</div>
 	);
 };

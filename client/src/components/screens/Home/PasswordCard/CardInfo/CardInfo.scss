@@ -1,0 +1,81 @@
+.card-info {
+	display: flex;
+	align-items: center;
+
+	> div {
+		flex: 1 0 60%;
+		overflow: hidden;
+		margin-right: 11px;
+	}
+
+	&__title {
+		margin-bottom: 25px;
+
+		h3 {
+			color: rgba(255, 255, 255, 0.906);
+			font-size: 20px;
+			font-weight: 600;
+			margin-bottom: 13px;
+		}
+		
+		p {
+			color: rgb(126, 126, 126);
+			font-size: 18px;
+			line-height: 20px;
+		}
+	}
+}
+
+.password-card {
+	display: flex;
+	align-items: center;
+	margin-bottom: 25px;
+
+	&__info {
+		flex: 1 0 60%;
+		overflow: hidden;
+		margin-right: 11px;
+
+		&-title {
+			color: rgba(255, 255, 255, 0.906);
+			font-size: 20px;
+			font-weight: 600;
+			text-transform: capitalize;
+			margin-bottom: 13px;
+
+			>span {
+				text-transform: lowercase;
+				color: rgb(126, 126, 126);
+			}
+		}
+
+		&-username {
+			color: rgb(126, 126, 126);
+			font-size: 18px;
+			line-height: 20px;
+		}
+	}
+
+	&__button {
+		padding: 0 4px;
+		margin-left: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		&:hover {
+			cursor: pointer;
+
+			svg {
+				color: rgba(255, 255, 255, 0.906);
+			}
+		}
+
+		svg {
+			width: 28px;
+			height: 28px;
+			color: rgb(126, 126, 126);
+			transition: .3s;
+		}
+	}
+}
